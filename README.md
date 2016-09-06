@@ -16,3 +16,4 @@ Add Concourse deploy script and wire it up with env variables
 Structure project for any middleware
 Add linting
 Add testing framework
+ES6 transpile support

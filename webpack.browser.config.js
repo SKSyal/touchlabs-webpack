@@ -4,7 +4,7 @@ var path = require('path');
 module.exports = {
     entry: {
       searchPage: "./src/searchPage.js",
-      landingPage: "./src/landingPage.js",
+      landingPage: "./src/landingPage.js"
     },
     output: {
         path: path.resolve(__dirname, 'assets'),

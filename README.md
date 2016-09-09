@@ -1,14 +1,24 @@
-run:
+#Touchlabs-webpack
 
-`npm install`
+##Set up
+###Prerequisites
+Node v4+ / npm
 
+
+###Installation
+run `npm install`
+
+then `npm start`
+
+*Babel errors? Run:*
 `npm install -g babel-cli`
 
-then:
+
+###Development
+Run
 `webpack --config [config-fileName]` to compile
 
-TODO:
-
+###TODO:
 - Load express/node server
 - Pass through environment variables
 - Create versioning system

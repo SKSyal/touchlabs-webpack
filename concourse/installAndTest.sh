@@ -1,4 +1,6 @@
+sudo apt-get update
+sudo apt-get install nodejs
 echo "Running npm install"
-npm install
+sudo npm install
 echo "Running npm test"
-npm test
+sudo npm test

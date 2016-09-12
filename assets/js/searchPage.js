@@ -44,18 +44,13 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./index.html\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	document.write(__webpack_require__(2));
 
 
 /***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "index.html";
-
-/***/ },
+/* 1 */,
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 

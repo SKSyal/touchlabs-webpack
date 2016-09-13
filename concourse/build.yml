@@ -15,11 +15,10 @@ jobs:
         platform: linux
         image_resource:
           type: docker-image
-          source: {repository: ubuntu}
-          privileged: true
+          source: {repository: node, tag: "5.12"}          
         inputs:
           - name: sources
             path: repo
         run:
-          path: ../repo/concourse/test.sh
+          path: ../repo/concourse/installAndTest.sh
           dir: repo

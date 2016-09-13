@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "npm install..."
+echo "npm installing..."
 npm install
-echo "npm start..."
+echo "npm starting..."
 npm lint:watch

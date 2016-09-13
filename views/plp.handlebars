@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/assets/src/libs/handlebars.min.js"></script>
+</head>
+
+<body>
+  <div class="entry">
+    <h1>{{head.title}}</h1>
+  </div>
+
+  {{> plp.facet }}
+
+  <button id="btn">Click for client side template rendering</button>
+
+  <div id="div1">
+
+    <script>
+      $("#btn").click(function() {
+        $("#div1").load("assets/src/templates/name.html", function(responseTxt, statusTxt, xhr) {
+          if (statusTxt == "success")
+
+          console.log($('#handlebars-demo').html())
+            var template = $('#handlebars-demo').html();
+          // Compile the template data into a function
+          var templateScript = Handlebars.compile(template);
+
+          var context = {
+            "name": "John",
+            "occupation": "developer"
+          };
+
+          // html = 'My name is Ritesh Kumar. I am a developer.'
+          var html = templateScript(context);
+
+          // Insert the HTML code into the page
+          $(document.body).append(html);
+          if (statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+        });
+      });
+    </script>
+
+</body>
+
+</html>

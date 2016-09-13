@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
 
 module.exports = {
@@ -12,15 +13,22 @@ module.exports = {
         chunkFilename: '[id].js'
     },
     module: {
-        loaders: [
-            {
-                test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-            },
-            {test: /\.js$/, loader: 'file-loader'}
-        ]
+        loaders: [{
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+        }, {
+            test: /\.hbs$/,
+            loader: 'handlebars-loader'
+        }, {
+            test: /\.html$/,
+            loader: 'html'
+        }]
     },
     plugins: [
-        new ExtractTextPlugin('./css/[name].css')
+        new ExtractTextPlugin('./css/[name].css'),
+        new CopyWebpackPlugin([
+            {from: './src/templates/**/*'},
+            {from: './src/libs/**/*'}
+        ])
     ]
 };

@@ -20,5 +20,5 @@ jobs:
           - name: sources
             path: repo
         run:
-          path: ../repo/concourse/build.sh
+          path: ../repo/ci/build.sh
           dir: repo

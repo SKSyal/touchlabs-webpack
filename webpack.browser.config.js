@@ -3,7 +3,7 @@ var path = require('path');
 
 module.exports = {
     entry: {
-        searchPage: './src/searchPage.js', 
+        searchPage: './src/searchPage.js',
         landingPage: './src/landingPage.js'
     },
     output: {
@@ -14,10 +14,10 @@ module.exports = {
     module: {
         loaders: [
             {
-              test: /\.scss$/,
-              loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
             },
-            { test:  /\.js$/, loader: 'file-loader' }
+            {test: /\.js$/, loader: 'file-loader'}
         ]
     },
     plugins: [

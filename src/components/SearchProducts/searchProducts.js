@@ -1,13 +1,13 @@
 require('./searchBox.js');
 
-module.exports = "It works from searchProducts.js. It works";
+module.exports = 'It works from searchProducts.js. It works';
 
 
 
 // class SearchProducts extend BaseComponent {
 //
 //   const baseConfig = {
-//     herp: "derp"
+//     herp: 'derp'
 //   }
 //   let element = null;
 //

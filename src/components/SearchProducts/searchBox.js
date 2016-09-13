@@ -1,3 +1,3 @@
-require("./searchBox.scss");
+require('./searchBox.scss');
 
-module.exports = "It works from searchBox.js.";
+module.exports = 'It works from searchBox.js.';

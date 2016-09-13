@@ -21,8 +21,5 @@ jobs:
           - name: sources
             path: repo
         run:
-          path: ../repo/concourse/installAndTest.sh
+          path: ../repo/concourse/test.sh
           dir: repo
-
-
-

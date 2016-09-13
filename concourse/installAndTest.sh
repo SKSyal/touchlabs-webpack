@@ -1,4 +1,3 @@
 echo "Running npm install"
+pwd
 npm install
-echo "Running npm test"
-npm test

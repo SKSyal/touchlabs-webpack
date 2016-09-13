@@ -13,9 +13,9 @@
     "open:src": "node bin/server.js",
     "bundle:node": "webpack --config webpack.node.config.js",
     "bundle:browser": "webpack --config webpack.browser.config.js",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "node_modules/.bin/esw webpack.*.config.js src",
-    "lint:watch": "npm run lint -- --watch --color",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:watch": "npm run lint -- --watch --color"
   },
   "engines": {
     "node": "6.5.0",

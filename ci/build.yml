@@ -3,7 +3,7 @@ resources:
     type: git
     source:
       uri: https://github.com/DigitalInnovation/touchlabs-webpack.git
-      branch: ci
+      branch: cf
 
 jobs:
 - name: test

@@ -15,7 +15,7 @@ module.exports =
     // The configuration for the server-side rendering
     name: 'server',
     target: 'node',
-    entry: './src/server.js',
+    entry: './src/server/server.js',
     output: {
         path: './bin/',
         publicPath: 'bin/',
@@ -24,8 +24,9 @@ module.exports =
     externals: nodeModules,
     module: {
         loaders: [
-            {test: /\.js$/, loaders: ['babel-loader']},
-            {test: /\.json$/, loader: 'json-loader'}
+          { test: /\.js$/, loaders: ['babel-loader']},
+          { test: /\.hbs$/, loader: 'handlebars-loader' },
+          { test:  /\.json$/, loader: 'json-loader' }
         ]
     },
     plugins: []

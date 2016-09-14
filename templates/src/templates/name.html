@@ -1,5 +1,0 @@
-<script id="handlebars-demo" type="text/x-handlebars-template">
-   <div>
-      My name is {{name}}. I am a {{occupation}}.
-   </div>
-</script>

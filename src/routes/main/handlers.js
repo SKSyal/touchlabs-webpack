@@ -1,12 +1,11 @@
-
-var index = function(req, res) {
+var index = function (req, res) {
     res.render('plp', {
-        head: { title: 'Main Page Title' },
+        head: {title: 'Main Page Title'},
         weather: {
-          location: 'London'
+            location: 'London'
         }
     });
-}
+};
 
 module.exports = {
     index: index

@@ -5,21 +5,22 @@ var mainRoute = require('./routes/main/routes');
 var app = express();
 var exphbs = require('express-handlebars');
 
-app.listen(3000, function() {
-  console.log('Example app listening on port 3000!');
+
+app.listen(process.env.PORT || 3000, function () {
+    console.log('Example app listening on port 3000!');//eslint-disable-line
 });
 
-app.use('/assets', express. static('assets'));
+app.use('/assets', express.static('assets'));
 
 app.set('views', path.join(__dirname, '/views'));
 
 app.engine('handlebars', exphbs({
-  defaultLayout: 'plp',
-  layoutsDir: 'views',
-  partialsDir: [
-    'views/partials/plp',
-    'views/partials/pdp'
-  ]
+    defaultLayout: 'plp',
+    layoutsDir: 'views',
+    partialsDir: [
+        'views/partials/plp',
+        'views/partials/pdp'
+    ]
 }));
 
 app.set('view engine', 'handlebars');

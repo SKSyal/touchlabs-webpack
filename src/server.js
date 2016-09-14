@@ -27,4 +27,3 @@ app.set('view engine', 'handlebars');
 
 // SPECIFY ROUTES MODULE
 app.use('/', mainRoute);
-

@@ -1,12 +1,28 @@
-const express = require('express');
-let app = express();
+var express = require('express');
+var path = require('path');
+var mainRoute = require('./routes/main/routes');
 
-app.use('/assets', express.static('assets'));
+var app = express();
+var exphbs = require('express-handlebars');
 
-app.get('/', function (req, res) {
-    res.send('Hello World!!!');
+app.listen(3000, function() {
+  console.log('Example app listening on port 3000!');
 });
 
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');//eslint-disable-line
-});
+app.use('/assets', express. static('assets'));
+
+app.set('views', path.join(__dirname, '/views'));
+
+app.engine('handlebars', exphbs({
+  defaultLayout: 'plp',
+  layoutsDir: 'views',
+  partialsDir: [
+    'views/partials/plp',
+    'views/partials/pdp'
+  ]
+}));
+
+app.set('view engine', 'handlebars');
+
+// SPECIFY ROUTES MODULE
+app.use('/', mainRoute);

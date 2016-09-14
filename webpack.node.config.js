@@ -24,16 +24,17 @@ module.exports =
     externals: nodeModules,
     module: {
         loaders: [
-            { test: /\.js$/,
+          { test: /\.js$/,
 
-                loaders: [
-                    'babel-loader'
-                ]
-            },
+              loaders: [
+                  'babel-loader'
+              ]
+          },
+          { test: /\.hbs$/, loader: 'handlebars-loader' },
             { test:  /\.json$/, loader: 'json-loader' }
         ]
     },
     plugins: [
-      
+
     ]
 };

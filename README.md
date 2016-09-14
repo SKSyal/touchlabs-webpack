@@ -19,11 +19,20 @@ Run
 `webpack --config [config-fileName]` to compile
 
 ###TODO:
-- Load express/node server
+
 - Pass through environment variables
+- Add testing framework
+- ES6 transpile support
+- Create an example Middleware ES6 component
+
+###In Progress:
+
 - Create versioning system
 - Add Concourse deploy script and wire it up with env variables
 - Structure project for any middleware
+
+###Done:
+
+- Load express/node server
 - Add linting
-- Add testing framework
-- ES6 transpile support
+- Added templating engine. (handlebars)

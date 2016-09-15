@@ -24,7 +24,13 @@ module.exports = {
     }, {
       test: /\.html$/,
       loader: "html"
-    }]
+    },
+    {
+      test: /\.js$/,
+      loaders: ['babel-loader'],
+      exclude: /node_modules/
+    }
+    ]
   },
 
   plugins: [

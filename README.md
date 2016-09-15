@@ -15,14 +15,18 @@ then `npm start`
 
 
 ###Development
+All scripts can be found in package json.
+
 Run
-`webpack --config [config-fileName]` to compile
+`npm run lint` to lint all files in the src/ directory and webpack config files
+
+Run
+`webpack` to compile
 
 ###TODO:
 
 - Pass through environment variables
 - Add testing framework
-- ES6 transpile support
 - Create an example Middleware ES6 component
 
 ###In Progress:
@@ -36,3 +40,4 @@ Run
 - Load express/node server
 - Add linting
 - Added templating engine. (handlebars)
+- ES6 transpile support

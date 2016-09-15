@@ -9,11 +9,12 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "npm-run-all bundle:browser bundle:node open:src",
-    "open:src": "node bin/server.js",
-    "bundle:node": "webpack --config webpack.node.config.js",
-    "bundle:browser": "webpack --config webpack.browser.config.js",
-    "lint": "node_modules/.bin/esw  --color webpack.*.config.js src",
+    "start": "npm-run-all bundle open:src",
+    "dev": "npm-run-all bundle dev-parallel",
+    "dev-parallel": "npm-run-all --parallel lint:watch open:src",
+    "open:src": "node src/server/server.js",
+    "bundle": "webpack --config webpack.config.js",
+    "lint": "node_modules/.bin/eslint  --color webpack.config.js src",
     "lint:watch": "npm run lint -- --watch --color",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

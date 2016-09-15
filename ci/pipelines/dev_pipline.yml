@@ -1,0 +1,26 @@
+resources:
+- name: sources
+  type: git
+  source:
+    uri: https://github.com/DigitalInnovation/touchlabs-webpack.git
+    branch: master
+- name: deploy-to-cf
+  type: cf
+  source:
+    api: https://api.eu-gb.bluemix.net
+    username: username
+    password: password
+    organization: MandS
+    space: mustang-dev
+
+jobs:
+- name: build-touchlabs
+  plan:
+  - get: sources
+    trigger: true
+  - task: build-and-test
+    file: sources/ci/tasks/build.yml
+  - put: deploy-to-cf
+    params:
+      manifest: sources/manifest.yml
+      path: sources

@@ -17,7 +17,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+      loader: ExtractTextPlugin.extract("style", "css!sass")
     }, {
       test: /\.hbs$/,
       loader: "handlebars-loader"

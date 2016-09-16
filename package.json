@@ -7,7 +7,8 @@
     "type": "git",
     "url": "https://github.com/DigitalInnovation/touchlabs-webpack.git"
   },
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "scripts": {
     "start": "npm-run-all bundle open:src",
     "dev": "npm-run-all bundle dev-parallel",
@@ -16,7 +17,8 @@
     "bundle": "webpack --config webpack.config.js",
     "lint": "node_modules/.bin/eslint  --color webpack.config.js src",
     "lint:watch": "npm run lint -- --watch --color",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-unit": "./node_modules/.bin/mocha --reporter spec unitTest.config.js"
   },
   "engines": {
     "node": "6.5.0",
@@ -44,6 +46,9 @@
     "path": "^0.12.7",
     "sass-loader": "^4.0.1",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "require-all": "^2.0.0"
   }
 }
